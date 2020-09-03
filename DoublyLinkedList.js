@@ -202,9 +202,3 @@ class DoublyLinkedList {
                 Searching could be O(n/2) but its just O(n)!
     */
 }
-
-let list = new DoublyLinkedList();
-list.push(10);
-list.push(20);
-list.push(30);
-list.unshift("Hello");
