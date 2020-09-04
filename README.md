@@ -3,3 +3,4 @@
 - DoublyLinkedList
 - Stack
 - Queue
+- Binary Search Tree
