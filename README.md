@@ -4,3 +4,5 @@
 - Stack
 - Queue
 - Binary Search Tree
+- BFS
+- DFS
