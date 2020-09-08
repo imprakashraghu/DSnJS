@@ -6,3 +6,4 @@
 - Binary Search Tree
 - BFS
 - DFS
+- MaxBinaryHeap
