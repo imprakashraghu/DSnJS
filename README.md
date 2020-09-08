@@ -7,3 +7,4 @@
 - BFS
 - DFS
 - MaxBinaryHeap
+- Priority Queue
