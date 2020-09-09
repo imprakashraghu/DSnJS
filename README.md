@@ -8,3 +8,4 @@
 - DFS
 - MaxBinaryHeap
 - Priority Queue
+- Hash Tables
