@@ -9,3 +9,4 @@
 - MaxBinaryHeap
 - Priority Queue
 - Hash Tables
+- Graph
