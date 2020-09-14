@@ -50,6 +50,81 @@ class Graph {
         }
         delete this.adjacencyList[vertex];
     }
+
+    depthFirstRecursive(start) { // traversing the graph recursively deepening
+        const result = [];
+        const visited = {};        
+        const adjacencyList = this.adjacencyList;
+        
+        (
+            function DFS(vertex) {
+                if(!vertex) return null; // base case      
+                visited[vertex] = true;
+                result.push(vertex);
+                adjacencyList[vertex].forEach(neighbour => {
+                    if(!visited[neighbour]) {
+                        return DFS(neighbour);
+                    }
+                });
+            }            
+        )(start)
+
+        return result;
+    }
+
+    depthFirstIterative(start) {  // traversing the graph iteratively deepening using stack
+        const result = []; // array of nodes
+        const visited = {}; // visited vertices
+        const stack = [start]; // stack
+        let currentVertex;
+
+        visited[start] = true;    
+
+        while(stack.length) {            
+            currentVertex = stack.pop();
+            result.push(currentVertex);
+
+            this.adjacencyList[currentVertex].forEach(neighbour => {
+                if(!visited[neighbour]) {
+                    visited[neighbour] = true;
+                    stack.push(neighbour);
+                }
+            });
+
+        }
+
+        return result;
+    }
+
+    breadthFirst(start) { // traversing a graph using queue widening
+        const queue = [start];
+        const result = [];
+        const visited = {};
+        let currentVertex;
+
+        visited[start] = true;
+
+        while(queue.length) {
+            currentVertex = queue.shift(); // removes item from the beginning of the list
+            result.push(currentVertex);
+
+            this.adjacencyList[currentVertex].forEach(neighbour => {
+                if(!visited[neighbour]) {
+                    visited[neighbour] = true;
+                    queue.push(neighbour);
+                }
+            });
+
+            // this.adjacencyList[currentVertex].slice().reverse().forEach(neighbour => { // for making traversing in reverse
+            //     if(!visited[neighbour]) {
+            //         visited[neighbour] = true;
+            //         queue.push(neighbour);
+            //     }
+            // });
+        }
+
+        return result;
+    }
 }
 
 
