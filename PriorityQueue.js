@@ -43,7 +43,7 @@ class PriorityQueue {
         return min;
     }
 
-    // HLPER FUNCTION
+    // HELPER FUNCTION
     sinkDown() {
         let index = 0;
         const length = this.values.length;

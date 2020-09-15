@@ -1,4 +1,4 @@
-## Data Structures in JavaScript
+## Data Structures and Algorithms in JavaScript
 - SinglyLinkedList
 - DoublyLinkedList
 - Stack
@@ -11,3 +11,6 @@
 - Hash Tables
 - Graph
 - Graph Traversal
+- Weighted Graph
+- Dijkstra Algorithm
+
