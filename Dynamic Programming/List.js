@@ -40,7 +40,7 @@ function nFibonacci(n) { // RECURSIVE SOLUTION
 
 // UPGRADE OUR SOLUTION !!!
 // USING PAST KNOWLEDGE TO MAKE SOLVING A FUTURE PROBLEM EASIER
-// => MEMOIZATION
+// => MEMOIZATION - TOP-DOWN APPROACH
 // USING ARRAY AS STORAGE
 function nFibonacciUpgraded(n, memo=[]) { // MEMO-IZED SOLUTION
     if(memo[n] !== undefined) return memo[n]; // (Short Circuits the entire process)
@@ -51,3 +51,18 @@ function nFibonacciUpgraded(n, memo=[]) { // MEMO-IZED SOLUTION
 }
 
 // BIG O(N) MUCH BETTER !!!
+// We have a problem with the call stack maximum size
+
+/*
+    TABULATION - BOTTOM-UP APPROACH
+    - Better Space Complexity can be achieved
+*/
+// TABULATION VERSION
+function fib(n) {
+    if(n <=2) return 1;
+    var fibNums [0,1,1];
+    for(var i=3; i<=n; i++) {
+        fibNums[i] = fibNums[i-1] + fibNums[i-2];
+    }
+    return fibNums[n];
+}

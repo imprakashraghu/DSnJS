@@ -13,4 +13,4 @@
 - Graph Traversal
 - Weighted Graph
 - Dijkstra Algorithm
-
+- Dynamic Programming
